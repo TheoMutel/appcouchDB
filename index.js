@@ -7,7 +7,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-const SECRET = "MA_CLE_SECRETE";
+const SECRET = "CLE";
 
 let users = [
   {
@@ -37,7 +37,7 @@ app.post("/login", (req, res) => {
   if (!userFound) {
     return res
       .status(401)
-      .json({ error: "l'email ou le mot de passe est incorrect." });
+      .json({ error: "le mail ou le mot de passe est incorrect." });
   }
 
   const payload = {
@@ -48,7 +48,7 @@ app.post("/login", (req, res) => {
   const token = jwt.sign(payload, SECRET, { expiresIn: "1h" });
 
   return res.json({
-    message: `Utilisateur ${email} connecté`,
+    message: ` ${email} est connecté`,
     token,
   });
 });

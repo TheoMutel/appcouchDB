@@ -2,8 +2,7 @@
 const LivreModel = require("../model/livreModel");
 
 class LivreController {
-  /* GET  http://localhost:3000/livres
-          http://localhost:3000/livres?token */
+  /* GET  http://localhost:3000/livres*/
   static async getAll(req, res) {
     try {
       const livres = await LivreModel.getAll();

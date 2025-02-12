@@ -1,5 +1,5 @@
-const nano = require("nano")("http://admin:azerty31@127.0.0.1:5984");
-n
+const nano = require("nano")("http://MTT3995A:Pepette31350,@127.0.0.1:5984");
+
 
 const db = nano.db.use("livres");
 

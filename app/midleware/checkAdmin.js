@@ -5,7 +5,7 @@ function checkAdmin(req, res, next) {
     const userStatut = req.user ? req.user.statut : "inconnu";
     return res.status(403).json({
       status: false,
-      message: `L'utilisateur n'est pas admin (statut: ${userStatut})`,
+      message: `L'utilisateur n'est pas un admin`,
     });
   }
 }

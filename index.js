@@ -7,24 +7,24 @@ const PORT = 3000;
 
 app.use(express.json());
 
-const SECRET = "MA_CLE_SECRETE_DE_DEMO";
+const SECRET = "MA_CLE_SECRETE";
 
 let users = [
   {
     id_user: 1,
-    email: "elias.nodon@gmail.com",
+    email: "user.user@gmail.com",
     mdp: "azerty31",
     statut: "user",
   },
   {
     id_user: 2,
-    email: "theo.mutel;empro@gmail.com",
+    email: "admin.admin@gmail.com",
     mdp: "azerty31",
     statut: "admin",
   },
 ];
 
-
+/* POST http://localhost:3000/login */
 app.post("/login", (req, res) => {
   const { email, mdp } = req.body;
   if (!email || !mdp) {
@@ -56,5 +56,5 @@ app.post("/login", (req, res) => {
 app.use("/livres", livreRouter);
 
 app.listen(PORT, () => {
-  console.log(`Serveur démarré sur le port ${PORT}`);
+  console.log(`Serveur lancé`);
 });

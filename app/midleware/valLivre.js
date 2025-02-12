@@ -1,4 +1,4 @@
-const { livreSchema } = require("./livreValidations");
+const { livreSchema } = require("../validation/livreValidations");
 
 function validateLivre(req, res, next) {
   const { error } = livreSchema.validate(req.body);

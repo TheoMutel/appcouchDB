@@ -1,4 +1,3 @@
-// app/Security/checkAdmin.js
 function checkAdmin(req, res, next) {
   if (req.user && req.user.statut === "admin") {
     return next();

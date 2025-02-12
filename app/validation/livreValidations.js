@@ -1,11 +1,10 @@
-// app/validation/livreValidations.js
 const Joi = require("joi");
 
-// Schéma pour un livre
+
 const livreSchema = Joi.object({
-  numero: Joi.number().integer().required(), // "numero" doit être un entier obligatoire
-  titre: Joi.string().min(1).required(), // "titre" doit être une chaîne non vide obligatoire
-  pages: Joi.array().items(Joi.string()).required(), // "pages" doit être un tableau de chaînes
+  numero: Joi.number().integer().required(),
+  titre: Joi.string().min(1).required(), 
+  pages: Joi.array().items(Joi.string()).required(),
 });
 
 module.exports = { livreSchema };

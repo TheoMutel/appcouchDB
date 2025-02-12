@@ -1,4 +1,3 @@
-// app/Security/checkToken.js
 const jwt = require("jsonwebtoken");
 const SECRET = "MA_CLE_SECRETE_DE_DEMO";
 
